@@ -2,49 +2,39 @@
 
 ## Project Overview
 
-This project demonstrates a complete DevOps workflow by deploying an Amazon Clone application on AWS using Docker, Jenkins, Terraform, and Kubernetes.
+This project demonstrates a complete CI/CD workflow by deploying an Amazon Clone web application on AWS EC2 using Docker and Jenkins.
 
 ## Architecture
 
-GitHub → Jenkins → Docker → Kubernetes → AWS EC2
+GitHub → Jenkins → Docker → AWS EC2
 
 ## Technologies Used
 
-* Linux
-* Git & GitHub
-* Docker
-* Jenkins
-* Terraform
-* Kubernetes
-* AWS EC2
-* HTML
-* CSS
+- Linux
+- Git & GitHub
+- Docker
+- Jenkins
+- AWS EC2
+- HTML
+- CSS
 
 ## Project Structure
 
-Amazon-Clone-Docker/
-
+```
+Amazon-Clone-Devops/
 ├── Dockerfile
-
 ├── Jenkinsfile
-
 ├── deploy.sh
-
-├── terraform/
-
-├── k8s/
-
 ├── index.html
-
 ├── style.css
-
-└── README.md
+├── images/
+├── README.md
+└── .gitignore
+```
 
 ## Features
 
-* Containerized application using Docker
-* Automated CI/CD pipeline using Jenkins
-* Infrastructure provisioning using Terraform
-* Kubernetes deployment with multiple replicas
-* Hosted on AWS EC2
-
+- Dockerized web application
+- Automated deployment using Jenkins
+- Hosted on AWS EC2
+- Version controlled with Git and GitHub
