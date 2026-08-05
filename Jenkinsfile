@@ -2,31 +2,28 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
+
+        stage('Checkout') {
             steps {
-                echo 'Repository cloned successfully'
+                checkout scm
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Deploy') {
             steps {
-                sh 'docker build -t amazon-clone:latest .'
+                sh 'chmod +x deploy.sh'
+                sh './deploy.sh'
             }
         }
+    }
 
-        stage('Stop Old Container') {
-            steps {
-                sh '''
-                docker stop amazon-clone || true
-                docker rm amazon-clone || true
-                '''
-            }
+    post {
+        success {
+            echo 'Application deployed successfully!'
         }
 
-        stage('Run New Container') {
-            steps {
-                sh 'docker run -d --name amazon-clone -p 8080:80 amazon-clone:latest'
-            }
+        failure {
+            echo 'Deployment failed!'
         }
     }
 }
