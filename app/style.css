@@ -1,0 +1,114 @@
+/* Reset */
+* {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Logo */
+.nav-logo {
+    height: 50px;
+    width: 100px;
+}
+
+.logo img {
+    height: 50px;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* Hover border effect */
+.border {
+    border: 1.5px solid transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.border:hover {
+    border: 1.5px solid white;
+}
+
+/* Address section */
+.add-first {
+    color: #cccccc;
+    font-size: 0.75rem;
+    margin-left: 15px;
+}
+
+.add-sec {
+    font-size: 1rem;
+    margin: 3px;
+}
+
+/* Search bar */
+.nav-search {
+    display: flex;
+    flex: 1;
+    margin: 0 15px;
+}
+
+.search-select {
+    padding: 5px;
+    border: none;
+}
+
+.search-input {
+    flex: 1;
+    padding: 5px;
+    border: none;
+}
+
+.search-icon {
+    background-color: #febd69;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Sign-in, returns, cart */
+.nav-signin,
+.nav-return,
+.nav-cart {
+    margin: 0 10px;
+}
+
+.nav-second {
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Products Section */
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+    background-color: #e3e6e6;
+}
+
+.box {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+}
