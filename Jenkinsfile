@@ -8,6 +8,12 @@ pipeline {
             }
         }
 
+        stage('Cleanup') {
+            steps {
+                sh 'docker compose down || true'
+            }
+        }
+
         stage('Build') {
             steps {
                 sh 'docker compose build'
@@ -21,4 +27,3 @@ pipeline {
         }
     }
 }
-
