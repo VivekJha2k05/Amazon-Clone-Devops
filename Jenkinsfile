@@ -10,7 +10,10 @@ pipeline {
 
         stage('Cleanup') {
             steps {
+                // Stop and remove any old containers/networks
                 sh 'docker compose down || true'
+                sh 'docker rm -f $(docker ps -aq) || true'
+                sh 'docker network prune -f || true'
             }
         }
 
