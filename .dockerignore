@@ -1,8 +1,0 @@
-.git
-.gitignore
-Dockerfile
-Jenkinsfile
-README.md
-.vscode
-.idea
-*.log
