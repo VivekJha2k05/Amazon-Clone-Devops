@@ -2,4 +2,4 @@ services:
   web:
     build: ./app
     ports:
-      - "9090:80"
+      - "9001:80"
